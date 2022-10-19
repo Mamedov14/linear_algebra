@@ -84,10 +84,21 @@ public class Main {
         }
 */
 
+/*
         matrix = Matrix.getInverse(matrix);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+*/
+
+        // MULTIPLY MATRIX ------------------------------------------------------
+        double[][] res = Matrix.multiply(matrix, B);
+        for (int i = 0; i < res.length; i++) {
+            for (int j = 0; j < res.length; j++) {
+                System.out.print(res[i][j] + " ");
             }
             System.out.println();
         }

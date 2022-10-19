@@ -1,5 +1,7 @@
 package ru.vsu;
 
+import java.util.ArrayList;
+
 public class Matrix {
 
     public static double determinant(double[][] matrix) {
@@ -141,4 +143,27 @@ public class Matrix {
         return solve;
     }
 
+    public static double[][] multiply(double[][] mat1, double[][] mat2) {
+        int n = mat1.length;
+        double[][] matrix = new double[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int u = 0; u < n; u++) {
+                for (int j = 0; j < n; j++) {
+                    matrix[i][u] += mat1[i][j] * mat2[j][u];
+                }
+            }
+        }
+        return matrix;
+    }
+
+    public static double[][] matrixMultiplyVector(double[][] matrix, double[] vector) {
+        int n = matrix.length;
+        double[][] result = new double[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+
+            }
+        }
+        return matrix;
+    }
 }
