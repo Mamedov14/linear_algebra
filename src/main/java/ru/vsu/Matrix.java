@@ -1,36 +1,6 @@
 package ru.vsu;
 
 public class Matrix {
-    private int n;
-    private int m;
-    private double[][] elementMatrix;
-
-    public Matrix(int n) {
-        this.n = n;
-    }
-
-    public Matrix(int n, double[][] elementMatrix) {
-        this.n = n;
-        this.elementMatrix = elementMatrix;
-    }
-
-    public Matrix(int n, int m, double[][] elementMatrix) {
-        this.n = n;
-        this.m = m;
-        this.elementMatrix = elementMatrix;
-    }
-
-    public Matrix(double[][] elementMatrix) {
-        this.elementMatrix = elementMatrix;
-    }
-
-    public Matrix(int n, int m) {
-        this.n = n;
-        this.m = m;
-    }
-
-    public Matrix() {
-    }
 
     public static double determinant(double[][] matrix) {
         int n = matrix.length;
@@ -86,7 +56,6 @@ public class Matrix {
     }
 
     public static double[][] getMatrixOfMinors(double[][] mat) {
-        // Matrix of Minors. Read more here https://en.wikipedia.org/wiki/Minor_(linear_algebra)
         mat = getTranspose(mat);
         double[][] matrix;
         double[][] solve = new double[mat.length][mat[0].length];
@@ -101,16 +70,12 @@ public class Matrix {
     }
 
     public static double getDeterminant(double[][] mat) {
-        // Laplace Expansion. Read more here https://en.wikipedia.org/wiki/Laplace_expansion
         if (mat.length == 2) {
-            // Given mat = [a, b], [c,d]
-            // Multiply values opposite to its position (a*d) - (b*d)
             return (mat[0][0] * mat[1][1]) - (mat[0][1] * mat[1][0]);
         } else {
             // Recursive Method
             int total = 0;
             for (int n = 0; n < mat.length; n++) {
-                // Get the array excluding the first row and current column (n)
                 double[][] matrix = arrayOfRange(mat, 0, n);
                 if (n % 2 == 0) {
                     total += mat[0][n] * getDeterminant(matrix);
@@ -143,8 +108,6 @@ public class Matrix {
     }
 
     public static double[][] getTranspose(double[][] matrix) {
-        // Transposing a matrix simply means to make the columns of the original matrix the rows in the transposed matrix.
-        // A 2x3, when transposed, turns into a 3x2. A 1x5, when transposed, turns into a 5x1.
         double[][] solve = new double[matrix[0].length][matrix.length];
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[0].length; col++) {
@@ -155,8 +118,6 @@ public class Matrix {
     }
 
     public static double[][] getMatrixOfAlgebraicAdditions(double[][] mat) {
-        // Convert the matrix into a checkerboard pattern of positives (+) and negatives (-)
-        // do not suggest that the final term should be positive or negative.
         double[][] adj = getMatrixOfMinors(mat);
         int i = 1;
         for (int row = 0; row < mat.length; row++) {
