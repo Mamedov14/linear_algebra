@@ -51,7 +51,6 @@ public class Main {
         }
 */
         // OUTPUT MATRIX ==========================================
-/*
 
         System.out.println();
         for (double[] doubles : matrix) {
@@ -61,7 +60,6 @@ public class Main {
             System.out.println();
         }
         System.out.println();
-*/
 
         // TEMP -------------------------------------------------
 
@@ -74,33 +72,23 @@ public class Main {
         }*/
 
         // INVERSE MATRIX ------------------------------------------------------
-/*
-        double determinant = Matrix.getDeterminant(B);
-        double[][] mat = Matrix.getAdjoint(B);
-        for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j < mat.length; j++) {
-                result[i][j] = ((double) (1) / determinant) * mat[i][j];
-            }
-        }
-*/
 
-/*
         matrix = Matrix.getInverse(matrix);
-        for (int i = 0; i < matrix.length; i++) {
+         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
-*/
 
         // MULTIPLY MATRIX ------------------------------------------------------
-        double[][] res = Matrix.multiply(matrix, B);
+        /*double[][] res = Matrix.multiply(matrix, B);
         for (int i = 0; i < res.length; i++) {
             for (int j = 0; j < res.length; j++) {
                 System.out.print(res[i][j] + " ");
             }
             System.out.println();
-        }
+        }*/
     }
+
 }

@@ -18,7 +18,7 @@ class TransposeMatrixTest {
                 {2, 4, 5},
                 {5, 6, 8},
         };
-        assertEquals(Matrix.transposeToMain(matrix), transposeMatrix);
+        assertEquals(Matrix.getTranspose(matrix), transposeMatrix);
     }
 
 }

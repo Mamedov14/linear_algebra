@@ -19,7 +19,7 @@ class DeterminantMatrixTest {
                 {3, 5, 8, 4},
                 {6, 7, 8, 9}
         };
-        assertEquals(Matrix.determinant(matrix), 29);
+        assertEquals(Matrix.getDeterminant(matrix), 29);
     }
 
     @Test
@@ -34,6 +34,6 @@ class DeterminantMatrixTest {
                 {3, 4, 6},
                 {3, 5, 8},
         };
-        assertEquals(Matrix.determinant(matrix), 5);
+        assertEquals(Matrix.getDeterminant(matrix), 5);
     }
 }
