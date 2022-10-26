@@ -62,7 +62,6 @@ public class Matrix {
         }
         return solve;
     }
-
     public static double[][] getMatrixOfAlgebraicAdditions(double[][] mat) {
         double[][] adj = getMatrixOfMinors(mat);
         int i = 1;
