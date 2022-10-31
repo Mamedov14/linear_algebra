@@ -62,6 +62,7 @@ public class Matrix {
         }
         return solve;
     }
+
     public static double[][] getMatrixOfAlgebraicAdditions(double[][] mat) {
         double[][] adj = getMatrixOfMinors(mat);
         int i = 1;
@@ -99,14 +100,15 @@ public class Matrix {
         return matrix;
     }
 
-    public static double[][] matrixMultiplyVector(double[][] matrix, double[] vector) {
+    public static double[] matrixMultiplyVector(double[][] matrix, double[] vector) {
         int n = matrix.length;
-        double[][] result = new double[n][n];
-        for (int i = 0; i < n; i++) {
+        int m = matrix[0].length;
+        double[] result = new double[n];
+        for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-
+                result[i] += matrix[i][j] * vector[j];
             }
         }
-        return matrix;
+        return result;
     }
 }
