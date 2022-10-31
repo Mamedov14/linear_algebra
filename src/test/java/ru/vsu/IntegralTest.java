@@ -26,7 +26,7 @@ class IntegralTest {
 
     @Test
     public void integralRectangleTest4() {
-        assertEquals(Integral.integralRectangle(-3, 7, Math::cos), "-0.9880316240928618");
+        assertEquals(Integral.integralRectangle(-3, 7, Math::cos), "0.7981066067786563");
     }
 
     @Test

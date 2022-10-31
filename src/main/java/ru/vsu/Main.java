@@ -1,7 +1,5 @@
 package ru.vsu;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -53,16 +51,7 @@ public class Main {
             }
     */
         // OUTPUT MATRIX ==========================================
-
-        System.out.println();
-        for (double[] doubles : matrix) {
-            for (int j = 0; j < matrix.length; j++) {
-                System.out.print(doubles[j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
+        Matrix.getMatrixOutOut(matrix);
         // TEMP -------------------------------------------------
 
             /*double[][] inverseMatrix = Matrix.inverseMatrix(matrix);
@@ -93,15 +82,18 @@ public class Main {
             }*/
 
 
-        // MULTIPLY MATRIX VECTOR ------------------------------------------------------
+        /*// MULTIPLY MATRIX VECTOR ------------------------------------------------------
         double[] vector = new double[]{
                 1, 2, 3
         };
 
-        double[] res = Matrix.matrixMultiplyVector(matrix, vector);
+        double[] res = Matrix.getMatrixMultiplyVector(matrix, vector);
         for (double re : res) {
             System.out.println(re);
-        }
+        }*/
+
+        double[][] mat = Matrix.getRandomMatrix(5, 6);
+        Matrix.getMatrixOutOut(mat);
     }
 
 

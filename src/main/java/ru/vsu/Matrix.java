@@ -87,7 +87,7 @@ public class Matrix {
         return solve;
     }
 
-    public static double[][] multiply(double[][] mat1, double[][] mat2) {
+    public static double[][] getMultiply(double[][] mat1, double[][] mat2) {
         int n = mat1.length;
         double[][] matrix = new double[n][n];
         for (int i = 0; i < n; i++) {
@@ -100,7 +100,7 @@ public class Matrix {
         return matrix;
     }
 
-    public static double[] matrixMultiplyVector(double[][] matrix, double[] vector) {
+    public static double[] getMatrixMultiplyVector(double[][] matrix, double[] vector) {
         int n = matrix.length;
         int m = matrix[0].length;
         double[] result = new double[n];
@@ -110,5 +110,24 @@ public class Matrix {
             }
         }
         return result;
+    }
+
+    public static double[][] getRandomMatrix(int n, int m /*mb range???*/) {
+        double[][] matrix = new double[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = (Math.random() * 100) - 100;
+            }
+        }
+        return matrix;
+    }
+
+    public static void getMatrixOutOut(double[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
