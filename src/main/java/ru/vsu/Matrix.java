@@ -19,7 +19,7 @@ public class Matrix {
         }
     }
 
-    public static double[][] getMatrixOfMinors(double[][] mat) {
+    private static double[][] getMatrixOfMinors(double[][] mat) {
         mat = getTranspose(mat);
         double[][] matrix;
         double[][] solve = new double[mat.length][mat[0].length];
@@ -33,7 +33,7 @@ public class Matrix {
         return solve;
     }
 
-    public static double[][] arrayOfRange(double[][] mat, int n, int m) {
+    private static double[][] arrayOfRange(double[][] mat, int n, int m) {
         double[][] matrix = new double[mat.length - 1][mat[0].length - 1];
         int row_sub = 0;
         for (int row = 0; row < mat.length; row++) {
@@ -63,7 +63,7 @@ public class Matrix {
         return solve;
     }
 
-    public static double[][] getMatrixOfAlgebraicAdditions(double[][] mat) {
+    private static double[][] getMatrixOfAlgebraicAdditions(double[][] mat) {
         double[][] adj = getMatrixOfMinors(mat);
         int i = 1;
         for (int row = 0; row < mat.length; row++) {
@@ -125,7 +125,8 @@ public class Matrix {
     public static void getMatrixOutOut(double[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                System.out.print(matrix[i][j] + " ");
+//                System.out.print(matrix[i][j] + " ");
+                System.out.printf("%.2f\t", matrix[i][j]);
             }
             System.out.println();
         }
