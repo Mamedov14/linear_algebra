@@ -30,7 +30,6 @@ public class Main {
 
         // INTEGRAL
         System.out.println("______________INTEGRAL SIN(x)______________");
-        System.out.printf("Integral = %.6f",Integral.integralTrapezoid(-5, 8, Math::sin));
+        System.out.printf("Integral = %.6f", Integral.integralTrapezoid(-5, 8, Math::sin));
     }
-
 }
